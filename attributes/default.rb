@@ -23,4 +23,5 @@ default['smartmontools']['devices']      = []
 default['smartmontools']['device_opts']  = "-H -l error -l selftest"
 default['smartmontools']['run_d']        = ["10mail"]
 # used with DEVICESCAN option
-default['smartmontools']['report_mail']  = ["root"]
+default['smartmontools']['report_mail']  = "root"
+default['smartmontools']['devicescan_options']  = "-M exec /usr/share/smartmontools/smartd-runner"

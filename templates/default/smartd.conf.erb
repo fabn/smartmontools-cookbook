@@ -25,7 +25,7 @@
 # Directives listed below, which will be applied to all devices that
 # are found.  Most users should comment out DEVICESCAN and explicitly
 # list the devices that they wish to monitor.
-DEVICESCAN -m <%= node['smartmontools']['report_mail'] %> -M exec /usr/share/smartmontools/smartd-runner
+DEVICESCAN -m <%= node['smartmontools']['report_mail'] %> <%= node['smartmontools']['devicescan_options'] %>
 
 # Alternative setting to ignore temperature and power-on hours reports
 # in syslog.
